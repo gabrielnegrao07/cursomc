@@ -2,10 +2,24 @@ package br.com.gabriel.cursomc.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class Categoria implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+//	Obs: Anotação não contém (;)
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	Aqui eu defino a estratégia de geração automática dos IDs.
+//	O IDENTITY da certo com o banco de dados H2 e com outros bancos de dados.
+//	Mas dependendo do banco de dados que você estiver usando, precisamos escolher
+//	outro tipo de geração de chave primária.
 	private Integer id;
 	private String nome;
 	
