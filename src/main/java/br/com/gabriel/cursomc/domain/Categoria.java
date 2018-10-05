@@ -16,10 +16,14 @@ public class Categoria implements Serializable {
 //	Obs: Anotação não contém (;)
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-//	Aqui eu defino a estratégia de geração automática dos IDs.
-//	O IDENTITY da certo com o banco de dados H2 e com outros bancos de dados.
-//	Mas dependendo do banco de dados que você estiver usando, precisamos escolher
-//	outro tipo de geração de chave primária.
+	
+	/**
+	 * Aqui eu defino a estratégia de geração automática dos IDs.
+	 * O IDENTITY da certo com o banco de dados H2 e com outros bancos de dados.
+	 * Mas dependendo do banco de dados que você estiver usando, precisamos escolher
+	 * outro tipo de geração de chave primária. 
+	 */
+	
 	private Integer id;
 	private String nome;
 	
