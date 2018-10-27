@@ -1,10 +1,9 @@
 package br.com.gabriel.cursomc.domain;
 
-import java.io.Serializable;
-
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 
 /**
  *Esse Embedable serve para dizer que essa classe é um subtipo.

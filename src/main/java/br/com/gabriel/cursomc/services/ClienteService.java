@@ -1,13 +1,12 @@
 package br.com.gabriel.cursomc.services;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import br.com.gabriel.cursomc.domain.Cliente;
 import br.com.gabriel.cursomc.repositories.ClienteRepository;
 import br.com.gabriel.cursomc.services.exceptions.ObjectNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class ClienteService {

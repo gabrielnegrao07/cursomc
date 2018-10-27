@@ -2,10 +2,9 @@ package br.com.gabriel.cursomc.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import java.io.Serializable;
-
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import java.io.Serializable;
 
 @Entity
 public class ItemPedido implements Serializable {

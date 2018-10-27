@@ -1,11 +1,10 @@
 package br.com.gabriel.cursomc.domain;
 
-import java.util.Date;
-
-import javax.persistence.Entity;
-
 import br.com.gabriel.cursomc.domain.enums.EstadoPagamento;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
+import javax.persistence.Entity;
+import java.util.Date;
 
 @Entity
 public class PagamentoComBoleto extends Pagamento {

@@ -1,35 +1,16 @@
 package br.com.gabriel.cursomc;
 
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-
+import br.com.gabriel.cursomc.domain.*;
+import br.com.gabriel.cursomc.domain.enums.EstadoPagamento;
+import br.com.gabriel.cursomc.domain.enums.TipoCliente;
+import br.com.gabriel.cursomc.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import br.com.gabriel.cursomc.domain.Categoria;
-import br.com.gabriel.cursomc.domain.Cidade;
-import br.com.gabriel.cursomc.domain.Cliente;
-import br.com.gabriel.cursomc.domain.Endereco;
-import br.com.gabriel.cursomc.domain.Estado;
-import br.com.gabriel.cursomc.domain.ItemPedido;
-import br.com.gabriel.cursomc.domain.Pagamento;
-import br.com.gabriel.cursomc.domain.PagamentoComBoleto;
-import br.com.gabriel.cursomc.domain.PagamentoComCartao;
-import br.com.gabriel.cursomc.domain.Pedido;
-import br.com.gabriel.cursomc.domain.Produto;
-import br.com.gabriel.cursomc.domain.enums.EstadoPagamento;
-import br.com.gabriel.cursomc.domain.enums.TipoCliente;
-import br.com.gabriel.cursomc.repositories.CategoriaRepository;
-import br.com.gabriel.cursomc.repositories.CidadeRepository;
-import br.com.gabriel.cursomc.repositories.ClienteRepository;
-import br.com.gabriel.cursomc.repositories.EnderecoRepository;
-import br.com.gabriel.cursomc.repositories.EstadoRepository;
-import br.com.gabriel.cursomc.repositories.ItemPedidoRepository;
-import br.com.gabriel.cursomc.repositories.PagamentoRepository;
-import br.com.gabriel.cursomc.repositories.PedidoRepository;
-import br.com.gabriel.cursomc.repositories.ProdutoRepository;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
 
 @SpringBootApplication
 public class CursomcApplication implements CommandLineRunner {

@@ -1,22 +1,12 @@
 package br.com.gabriel.cursomc.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Pedido implements Serializable {
@@ -39,11 +29,11 @@ public class Pedido implements Serializable {
 	 * quero que o pagamento serialize o pedido, sendo assim preciso coloacar a anotação
 	 * de @JsonBackReference no Pedido do paramento.
 	 */
-	@JsonManagedReference
+
 	@OneToOne(cascade=CascadeType.ALL, mappedBy="pedido")
 	private Pagamento pagamento;
 
-	@JsonManagedReference
+
 	@ManyToOne
 	@JoinColumn(name="cliente_id")
 	private Cliente cliente;

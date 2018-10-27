@@ -1,8 +1,8 @@
 package br.com.gabriel.cursomc.domain;
 
-import javax.persistence.Entity;
-
 import br.com.gabriel.cursomc.domain.enums.EstadoPagamento;
+
+import javax.persistence.Entity;
 
 @Entity
 public class PagamentoComCartao extends Pagamento {

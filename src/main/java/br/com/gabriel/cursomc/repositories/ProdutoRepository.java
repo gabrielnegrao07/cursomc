@@ -1,9 +1,8 @@
 package br.com.gabriel.cursomc.repositories;
 
+import br.com.gabriel.cursomc.domain.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import br.com.gabriel.cursomc.domain.Produto;
 
 @Repository
 //JpaRepository é um tipo especial do Spring capaz de acessar os dados com base em um tipo que for passado.
