@@ -1,5 +1,7 @@
 package br.com.gabriel.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 
 import javax.persistence.EmbeddedId;
@@ -15,6 +17,7 @@ public class ItemPedido implements Serializable {
 	 * Ou seja é uma chave composta e nós usamos uma classe auxiliar
 	 * para representa-lá.
 	 */
+	@JsonIgnore
 	@EmbeddedId
 	/**
 	 * É um Id embutido em tipo auxiliar.
@@ -37,11 +40,11 @@ public class ItemPedido implements Serializable {
 		this.quantidade = quantidade;
 		this.preco = preco;
 	}
-	
+	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
 	}
-	
+
 	public Produto getProduto() {
 		return id.getProduto();
 	}

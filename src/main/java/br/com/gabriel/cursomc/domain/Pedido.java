@@ -1,5 +1,8 @@
 package br.com.gabriel.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
@@ -22,15 +25,25 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
+
+	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
 	private Date instante;
 	
 	/**
 	 * Esse cascade=CascadeType.All é necessário pois senão irá ocorrer um erro de entidade
 	 * transiente quando vai salvar um pedido e o pagamento dele.
 	 */
+
+	/**
+	 * Aqui eu permito que o pagamento seja serializado pelo pedido, no entanto eu não
+	 * quero que o pagamento serialize o pedido, sendo assim preciso coloacar a anotação
+	 * de @JsonBackReference no Pedido do paramento.
+	 */
+	@JsonManagedReference
 	@OneToOne(cascade=CascadeType.ALL, mappedBy="pedido")
 	private Pagamento pagamento;
-	
+
+	@JsonManagedReference
 	@ManyToOne
 	@JoinColumn(name="cliente_id")
 	private Cliente cliente;
